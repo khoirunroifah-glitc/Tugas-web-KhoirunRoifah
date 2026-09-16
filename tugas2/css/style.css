@@ -1,0 +1,334 @@
+:root {
+    --bg-color: #FFF9D8; 
+    --text-main: #4A4633; 
+    --text-muted: #7A7558;
+    --accent: #E5A93C;
+    --card-bg: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 30px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    width: max-content;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.dicoding-link {
+    background-color: var(--text-main);
+    color: var(--bg-color) !important;
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+.dicoding-link:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+header {
+    margin-top: 100px; 
+    padding: 60px 20px 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    max-width: 600px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--accent);
+    position: relative;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.container {
+    display: flex; 
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    gap: 40px;
+    flex: 1;
+    align-items: flex-start;
+}
+
+article {
+    flex: 1.8; 
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(168, 158, 107, 0.15); 
+}
+
+.article-header h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+article p {
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.skills-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+aside {
+    flex: 1; 
+}
+
+.profile-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(168, 158, 107, 0.15);
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover; 
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 8px solid var(--bg-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.profile-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+}
+
+.bio-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(122, 117, 88, 0.3);
+}
+
+.bio-item .label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.bio-item .value {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.btn-github {
+    display: inline-block;
+    background: #24292e;
+    color: white;
+    padding: 10px 1px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 85%;
+        padding: 10px 15px;
+    }
+    
+    nav ul {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+    
+    .container {
+        flex-direction: column; 
+    }
+    
+    article, aside {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+nav {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+header {
+    animation: fadeInUp 1s ease forwards;
+}
+
+article {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+aside {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.profile-img {
+    animation: float 4s ease-in-out infinite;
+}
+
+.badge {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+.badge:nth-child(1) { animation-delay: 0.5s; }
+.badge:nth-child(2) { animation-delay: 0.6s; }
+.badge:nth-child(3) { animation-delay: 0.7s; }
+
+.highlight:hover {
+    animation: pulse 0.6s ease;
+}
+
+article, .profile-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+article:hover, .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(168, 158, 107, 0.2);
+}
+
+.btn-github {
+    display: inline-block;
+    background: #24292e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-github:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
