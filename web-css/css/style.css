@@ -9,7 +9,7 @@ body {
 .container {
     background-color: white;
     margin: 0 auto;
-    width: 800px;
+    width: 900px;
 }
 
 /* mengatur jarak dalam header */
@@ -49,4 +49,62 @@ body {
     background-color: pink;
     color: white;
     transition: 0.5s;
+}
+
+/* untuk css banner */
+.banner {
+    height: 350px;
+    /* background-color: lightblue; */
+    /* memberikan file gambar */
+    background-image: url('../img/banner.jpg');
+    /* atur ukuran gambar */
+    background-size: cover;
+    /* mengatur posisi gambar horizontal dan vertikal */
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* mengatur garis tepi tebal jenis warna */
+    border-top: 5px solid pink;
+    border-bottom: 5px solid skyblue;
+}
+
+/* menambahkan bagian isi  */
+.isi {
+    padding: 20px;
+}
+
+.isi h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.isi .penulis {
+    font-size: 14px;
+    /* agar agak naik */
+    margin-top: -10px;
+}
+
+.isi .penulis a {
+    text-decoration: none;
+    color: pink;
+} 
+
+.isi p {
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+/* menambahkan footer */
+.footer {
+    background-color: skyblue;
+    height: 50px;
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 900px;
+}
+
+
+.footer .copyright {
+    font-size: 16px;
+    color: white;
+    text-align: center;
 }
