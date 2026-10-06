@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASIR-JS 🛍️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #FFF5F8;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #D65A84;
+        }
+        .struk {
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+            line-height: 1.8;
+            background: #FFFAF0;
+            padding: 25px;
+            margin: 0 auto;
+            max-width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 2px dashed #F8C8DC;
+        }
+        .tengah { text-align: center; }
+        .kanan { text-align: right; display: inline-block; width: 100px; }
+        .garis { border-bottom: 2px dashed #D8A8B8; margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <h1>🛍️ Kasir Ceria 🛍️</h1>
+
+    <script>
+        // Ambil data
+        let nama = prompt("😊 Nama Barang:");
+        let harga = parseFloat(prompt("💰 Harga Barang:"));
+        let qty = parseInt(prompt("🛒 Jumlah Beli:"));
+
+        // Hitung
+        let total = harga * qty;
+        let diskon = 0;
+        let catatanDiskon = "";
+
+        if (total > 50000) {
+            diskon = total * 0.1;
+            catatanDiskon = "🎉 DAPAT DISKON 10%!";
+        } else {
+            catatanDiskon = "💡 Belanja Rp50.000+ dapat diskon ya~";
+        }
+
+        let totalBayar = total - diskon;
+
+        // Tampilkan struk yang CANTIK & LUCU
+        document.write('<div class="struk">');
+        document.write('<div class="tengah">✨ TERIMA KASIH ✨</div>');
+        document.write('<div class="garis"></div>');
+        
+        document.write('Nama Barang : ' + nama + '<br>');
+        document.write('Harga Satuan: Rp ' + harga.toLocaleString('id-ID') + '<br>');
+        document.write('Jumlah Beli : ' + qty + ' buah<br>');
+        document.write('<div class="garis"></div>');
+        
+        document.write('Subtotal     : <span class="kanan">Rp ' + total.toLocaleString('id-ID') + '</span><br>');
+        document.write('Diskon 10%   : <span class="kanan">- Rp ' + diskon.toLocaleString('id-ID') + '</span><br>');
+        document.write('<div class="garis"></div>');
+        
+        document.write('<strong>TOTAL BAYAR  : <span class="kanan">Rp ' + totalBayar.toLocaleString('id-ID') + '</span></strong><br>');
+        document.write('<div class="garis"></div>');
+        
+        document.write('<div class="tengah">' + catatanDiskon + '</div>');
+        document.write('<div class="tengah">💖 Selamat Berbelanja 💖</div>');
+        
+        document.write('</div>');
+    </script>
+
+</body>
+</html>
