@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM</title>
+</head>
+<body>
+    <h1 id="judul">Tentang Saya</h1>
+
+<p>Halo! Nama saya Khoirun Roifah. Saya suka dunia kecantikan dan seni rias. Bagi saya, makeup bukan sekadar penampilan, tapi cara mengekspresikan diri dan membuat orang lain merasa lebih percaya diri.</p>
+
+<p>Selain belajar, saya juga suka mengembangkan kreativitas lewat berbagai gaya riasan. Mulai dari gaya yang natural sehari-hari hingga gaya yang berani dan penuh warna, semuanya saya nikmati prosesnya!</p>
+
+<h3 class="daftar">Hal yang Saya Suka</h3>
+<ul>
+    <li>💄 Bermain dengan warna riasan</li>
+    <li>📸 Mengabadikan hasil karya</li>
+    <li>📚 Belajar hal-hal baru</li>
+</ul>
+
+    <script>
+        let judul=document.getElementById('judul');
+        console.log(judul);
+</script>
+
+    <script>
+        let p=document.getElementsByTagName('p');
+        console.log(p);
+</script>
+
+    <script>
+        let daftar=document.getElementsByClassName('daftar');
+        console.log(daftar);
+</script>
+
+    <script>
+        let title=document.querySelector('#judul');
+        console.log(title);
+</script>
+
+    <script>
+        let list=document.querySelectorAll('li');
+        console.log(list);
+</script>
+</body>
+</html>
